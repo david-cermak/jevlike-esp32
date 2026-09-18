@@ -1,0 +1,41 @@
+{"context": "turn on the kitchen light", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "switch off the bedroom lamp", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "set the thermostat to 21 degrees", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "open the garage door", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "turn on the hallway lights please", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "close the living room blinds", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "lock the front door", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "dim the office lights", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "start the dishwasher", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "stop the washing machine", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "set the volume to 10", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "turn off all lights", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "what is the weather tomorrow", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "will it rain in Prague today", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "how cold will it be this evening", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "is there going to be rain tomorrow morning", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "what is the forecast for Brno", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "do I need an umbrella this afternoon", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "is it sunny in Ostrava", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "how hot will it be on Saturday", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "check today's weather", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "what is the wind speed tonight", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "is snow expected this weekend", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "humidity in the city tomorrow", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "explain why quantum computers are dangerous for TLS", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "compare MQTT and QUIC for an embedded product", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "help me design a secure firmware update system", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "write a Python program that parses this protocol", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "why does my Wi-Fi keep disconnecting and how should I debug it", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "summarise the difference between TCP and UDP", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "draft an email to my manager about the project delay", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "how does a Kalman filter work", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "suggest an architecture for a home automation hub", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "translate this paragraph into French", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "what is the meaning of life", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "explain public key cryptography to a beginner", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "explain how HTTPS certificates work", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "explain how a hash function works", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "explain how MQTT topics are used", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "how should I structure a firmware update", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "how does TLS protect a TCP connection", "options": ["command", "weather", "complex"], "label": 2}

@@ -1,0 +1,6 @@
+{"context": "please turn off the bathroom light", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "open the kitchen window", "options": ["command", "weather", "complex"], "label": 0}
+{"context": "is rain likely this weekend in Prague", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "how warm will Friday afternoon be", "options": ["command", "weather", "complex"], "label": 1}
+{"context": "why should I use mutual TLS on an ESP32", "options": ["command", "weather", "complex"], "label": 2}
+{"context": "help me debug a deadlock in my firmware", "options": ["command", "weather", "complex"], "label": 2}
