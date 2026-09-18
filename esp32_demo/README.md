@@ -1,15 +1,15 @@
-# Fake ESP32 Jevlike edge router
+# ESP32 Jevlike edge router demo
 
-A tiny Python demo of this repository's text model. The "ESP32" accepts ASCII
-text and classifies it into `command`, `weather`, or `complex`.
+A tiny demo of this jevlike repository's text model. Training stays in Python. The
+same scorer then runs either in Python or as an ESP-IDF firmware.
 
-If it is a command, it acts locally. If it is weather, it prints that the
-weather service would be queried. If it is complex, or confidence is low, it
-prints that the request would be forwarded to a cloud LLM.
+The model classifies ASCII text as `command`, `weather`, or `complex` and
+prints the routing decision. There is no GPIO, weather client, or cloud call
+yet.
 
 This is intentionally a demo, not a production model.
 
-## Run
+## Train (Python)
 
 From the repository root:
 
@@ -19,9 +19,28 @@ source .venv/bin/activate
 pip install -e .
 python examples/esp32_demo/fake_esp32.py --train --device cpu
 python examples/esp32_demo/fake_esp32.py --once "turn on the kitchen light"
-python examples/esp32_demo/fake_esp32.py
 ```
 
 `--train` expands the hand-written JSONL files with held-out templates, writes
-`runs/esp32_demo/command-router.pt`, and evaluates the generated test split.
-The interactive loop loads that checkpoint and routes on the model's top option.
+`runs/esp32_demo/command-router.pt`, evaluates the generated test split, and
+packs `firmware/main/weights.bin` for the ESP32 app.
+
+## Classify on ESP32
+
+The firmware is a standard ESP-IDF project. It embeds the packed TinyScorer
+weights and runs the same one-pass option head in C. No extra tensor library
+is required: the model is byte embeddings, layer-norm, and a few matrix
+multiplies.
+
+```sh
+source /home/david/esp/idf/export.sh   # or: source $IDF_PATH/export.sh
+python examples/esp32_demo/export_firmware.py
+cd examples/esp32_demo/firmware
+idf.py set-target esp32
+idf.py build
+idf.py -p PORT flash monitor
+```
+
+On boot the serial console classifies three sample phrases, then reads more
+lines from UART. You should see the same GPIO / weather / cloud prints as the
+Python router.

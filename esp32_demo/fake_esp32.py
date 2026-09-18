@@ -209,6 +209,7 @@ def train(*, epochs: int, device: str, batch_size: int) -> None:
         [sys.executable, "-m", "jevlike.eval", str(MODEL), str(test_path), "--device", device],
         check=True,
     )
+    subprocess.run([sys.executable, str(ROOT / "export_firmware.py")], check=True)
 
 
 def load_model(device_name: str):
